@@ -8,11 +8,11 @@ class AdminPostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'DESC')->get();
+        $posts = Post::where('is_feature', '=', 1)->orderBy('id', 'DESC')->get();
         $data = [
             'posts' => $posts,
         ];
-        return view('admin.posts.index', $data);
+        return view('posts.index', $data);
     }
 
     public function create()
