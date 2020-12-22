@@ -27,3 +27,8 @@ class AdminPostsController extends Controller
         return view('admin.posts.edit', $data);
     }
 }
+
+    public function store()
+    {
+    //
+    }
