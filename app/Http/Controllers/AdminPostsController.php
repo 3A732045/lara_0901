@@ -26,6 +26,7 @@ class AdminPostsController extends Controller
         $data = [
             'post' => $post,
         ];
+        return view('admin.posts.edit',$data);
     }
 
 
