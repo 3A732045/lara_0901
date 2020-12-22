@@ -23,7 +23,7 @@ Route::get('posts/{id}', [PostsController::class, 'show'])->name('posts.show');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard.index');
-
+    Route::post('posts', [AdminPostsController::class, 'store'])->name('admin.posts.store');
     Route::get('posts', [AdminPostsController::class, 'index'])->name('admin.posts.index');
     Route::get('posts/create', [AdminPostsController::class, 'create'])->name('admin.posts.create');
     Route::get('posts/{id}/edit', [AdminPostsController::class, 'edit'])->name('admin.posts.edit');
